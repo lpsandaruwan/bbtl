@@ -11,5 +11,9 @@ cd linux-*
 
 #configure
 make tinyconfig #set the minimal configuration
-sed -i "s/.*CONFIG_DEFAULT_HOSTNAME.*/CONFIG_DEFAULT_HOSTNAME=\"BBTL\"/" .config #change the default host name
+
+#change the default host name
+sed -i "s/.*CONFIG_DEFAULT_HOSTNAME.*/CONFIG_DEFAULT_HOSTNAME=\"BBTL\"/" .config 
+
+#compile
 make vmlinux
